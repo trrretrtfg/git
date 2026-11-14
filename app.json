@@ -1,22 +1,42 @@
+
 {
   "expo": {
-    "name": "ZIKRA",
+    "name": "ذِكرى",
     "slug": "zikra",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "scheme": "zikra",
     "android": {
       "package": "com.zikra.app",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "permissions": [
+        "INTERNET",
+        "POST_NOTIFICATIONS"
+      ]
     },
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#FFFFFF"
+    "plugins": [
+      [
+        "onesignal-expo-plugin",
+        {
+          "mode": "production"
+        }
+      ],
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": false
+    },
+    "extra": {
+      "oneSignalAppId": "7629f762-8d70-4f11-b1c9-0c96903331a6",
+      "eas": {
+        "projectId": "2dc50fbc-8ed2-417c-8d2b-56c73b9bafe5"
+      }
     }
   }
 }
